@@ -1,0 +1,15 @@
+grad_playlist/
+.env
+venv/
+__pycache__/
+vggish_pca_params.npz
+vggish_model.ckpt
+mel_features.py
+vggish_export_tfhub.py
+vggish_inference_demo.py
+vggish_input.py
+vggish_postprocess.py
+vggish_params.py
+vggish_smoke_test.py
+vggish_slim.py
+vggish_train_demo.py
