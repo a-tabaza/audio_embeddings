@@ -41,6 +41,8 @@ Ensure you have ``ffmpeg`` installed and added to the system path. If not, downl
 
 The barebones code for extracting audio embeddings is in embed.py. The code below shows how to use the code to extract embeddings from an audio file:
 
+NOTE: VGGish expects a wav, mono, at 16kHz, I've handled this very primitively in my code, but you might need to fix it.
+
 In python:
 ```python
 from embed import embed_audio
@@ -61,4 +63,21 @@ CLI (used mainly for testing, prints the embedding to the console):
 python embed.py path\to\your\audio\file.mp3 mean True
 ```
 
+# Demo
+The following links to a Nomic Atlas map of the embeddings with the following params:
+- Mean Pooling
+- No Post Processing
+- Normalized
+- Metadata from the spotify API
+- 30 sec preview clips of the songs
+- mp3 resampled to 16kHz and mixed down to mono
 
+[Audio Embeddings Map](https://atlas.nomic.ai/data/tyqnology/grad-playlist-vggish-mean-pooling-normalized/map)
+
+Here is my primitive drawing over the map (it passed the sanity check it has clusters of reasonable meaning):
+
+![Map Drawing](nomic_poorly_drawn_over.png)
+
+# References
+- [VGGish Model Original Code](https://github.com/tensorflow/models/blob/master/research/audioset/vggish/README.md)
+- [Colab Demo (good code, not by me)](https://colab.research.google.com/drive/1E3CaPAqCai9P9QhJ3WYPNCVmrJU4lAhF)
