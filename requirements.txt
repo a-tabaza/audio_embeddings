@@ -6,3 +6,5 @@ six
 soundfile
 audiofile
 audresample
+fastapi[all]
+python-multipart
