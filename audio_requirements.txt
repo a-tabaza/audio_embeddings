@@ -1,0 +1,10 @@
+numpy
+resampy
+tensorflow
+tf_slim
+six
+soundfile
+audiofile
+audresample
+fastapi[all]
+python-multipart
